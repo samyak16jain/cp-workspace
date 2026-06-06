@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "g++ -std=c++23 main.cpp -o main",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "./main < input.txt",
+            "dependsOn": ["Build"],
+            "group": "test"
+        }
+    ]
+}
