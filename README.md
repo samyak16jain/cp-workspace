@@ -21,8 +21,16 @@ sudo apt install g++
 ## Compile
 
 ```bash
-g++ -std=c++23 main.cpp -o main
+g++ -std=c++23 -I. main.cpp -o main
 ```
+
+On macOS, use Homebrew GCC (plain `g++` is Clang):
+
+```bash
+g++-15 -std=c++23 -I. main.cpp -o main
+```
+
+The `-I.` flag picks up the local `bits/stdc++.h` shim. Codeforces provides this header natively — only submit `main.cpp`, not the `bits/` folder.
 
 ## Run
 

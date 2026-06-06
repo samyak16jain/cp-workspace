@@ -4,7 +4,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "g++ -std=c++23 main.cpp -o main",
+            "command": "g++-15 -std=c++23 -I. main.cpp -o main",
             "group": {
                 "kind": "build",
                 "isDefault": true
